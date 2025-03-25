@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('checkout the code from github'){
             steps{
-                 git url: 'https://github.com/Sahilkadri545/banking-project'
+                 git url: 'https://github.com/Sahilkadri545/banking-project.git'
                  echo 'github url checkout'
             }
         }
@@ -35,7 +35,7 @@ pipeline{
          }
         stage('port expose'){
             steps{
-                sh 'docker run -dt -p 8091:8091 --name c003 myimg'
+                sh 'docker run -dt -p 8091:8091 --name c000 myimg'
             }
         }   
     }
